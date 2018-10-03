@@ -2,8 +2,15 @@ h1, .step_status, .button_reset {
 	text-align: center;
 }
 
-.board{
+.board {
   margin: 20px auto 0;
   width: 618px;
   height: 618px;
+}
+
+.cell {
+	border: 3px dashed black;
+  width: 200px;
+  height: 200px;
+  float: left;
 }
