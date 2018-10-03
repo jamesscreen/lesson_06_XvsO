@@ -1,0 +1,9 @@
+h1, .step_status, .button_reset {
+	text-align: center;
+}
+
+.board{
+  margin: 20px auto 0;
+  width: 618px;
+  height: 618px;
+}
