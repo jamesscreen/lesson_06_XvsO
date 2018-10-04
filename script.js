@@ -80,19 +80,13 @@ function tableClick(){
 
 // Сброс игры
 function reset(){
-	console.log('reset start');
-	
 	gamer1 = true;
 	gameTable = [[null, null, null],[null, null, null],[null, null, null]];
 	nullCount = 9;
 	winner = null;
-	
 	var table = document.getElementsByClassName('inner-cell');
 	for (var i = 0; i < table.length; i++){
 		table[i].innerText = '';
 	}
-	
 	player.innerText = 'Сейчас ходит X';
-	
-	console.log('reset stop');
 }
