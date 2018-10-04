@@ -1,0 +1,39 @@
+h1, .step_status, .button_reset {
+	text-align: center;
+}
+
+.board {
+	margin: 20px auto 0;
+	width: 618px;
+	height: 618px;
+	width: 620px;
+	height: 620px;
+}
+
+.cell {
+	border: 3px dashed black;
+	width: 200px;
+	height: 200px;
+	float: left;
+}
+
+.inner-cell {
+	width: 200px;
+	height: 200px;
+	font-size: 180px;
+	text-align: center;
+}
+
+.button_reset{
+	display: inline-block;
+	margin: 0 auto;
+	padding: 7px 14px;
+	border-radius: 5px;
+	border: 1px solid black;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.bottom{
+	text-align: center;
+}
