@@ -19,8 +19,18 @@ for(var i=0; i<9; i++){
 	
 	innerElement.onclick = tableClick; // создаем "событие" отвечающее за нажатие мышкой на элемент innerElement; нажатие запускает функцию tableClick
 	
-	innerElement.setAttribute('x', (i % 3).toString());
-	innerElement.setAttribute('y', parseInt(i / 3).toString());
+	
+	/*
+			[0,0][0,1][0,2]
+			[1,0][1,1][1,2]
+			[2,0][2,1][2,2]
+			
+			x - строка матрицы игры
+			y - столбец матрицы
+	*/
+	
+	innerElement.setAttribute('x', parseInt(i / 3).toString());
+	innerElement.setAttribute('y', (i % 3).toString());
 	
 	
 	board.appendChild(element);
@@ -33,8 +43,11 @@ function tableClick(){
 		// если gamer1 = true, то рисуем в innerElement симол крестика, если нет, то нолика
 		this.innerText = gamer1 ? 'X' : 'O';
 		
-		var x = this.getAttribute('x');
-		var y = this.getAttribute('y');
+		var x = this.getAttribute('x'); // переменная х получаем значение атрибута innerElement
+		var y = this.getAttribute('y'); // переменная y получаем значение атрибута innerElement
+		
+		gameTable[x][y] = gamer1; // заполняем матрицу игры, первый ход за "Х"-ом
+		nullCount--; // понижаем счетчик количества ходов
 		
 		
 	}
