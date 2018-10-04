@@ -25,3 +25,11 @@ for(var i=0; i<9; i++){
 	board.appendChild(element);
 	element.appendChild(innerElement);
 }
+
+function tableClick(){
+	// все действия, изменения и расчеты выполняются только если поле "пустое", т.е. на него ранее не совершалось нажатие
+	if (this.innerText == '') { // gроверим, является ли поле, на которое мы нажимаем, "пустым"
+		// если gamer1 = true, то рисуем в innerElement симол крестика, если нет, то нолика
+		this.innerText = gamer1 ? 'X' : 'O'; 
+	}
+}
