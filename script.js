@@ -79,14 +79,19 @@ function tableClick(){
 	}
 }
 
+// Сброс игры
 function reset(){
+	console.log('reset start');
+	
 	gamer1 = true;
 	nullCount = 9;
 	gameTable = [[null, null, null],[null, null, null],[null, null, null]];
 	winner = null;
-	player.innerText = 'Сейчас ходит X';
 	var table = document.getElementsByClassName('inner-cell');
-	for(var i = 0; i < table.length; i++ ){
+	for(var i = 0; i < table.length; i++){
 		table[i].innnerText = '';
 	}
+	player.innerText = 'Сейчас ходит X';
+	
+	console.log('reset stop');
 }
