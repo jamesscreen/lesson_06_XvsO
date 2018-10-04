@@ -19,8 +19,9 @@ for(var i=0; i<9; i++){
 	
 	innerElement.onclick = tableClick; // создаем "событие" отвечающее за нажатие мышкой на элемент innerElement; нажатие запускает функцию tableClick
 	
-	//innerElement.setAttribute('x', (i % 3).toString());
-	//innerElement.setAttribute('y', parseInt(i / 3).toString());
+	innerElement.setAttribute('x', (i % 3).toString());
+	innerElement.setAttribute('y', parseInt(i / 3).toString());
+	
 	
 	board.appendChild(element);
 	element.appendChild(innerElement);
@@ -30,6 +31,11 @@ function tableClick(){
 	// все действия, изменения и расчеты выполняются только если поле "пустое", т.е. на него ранее не совершалось нажатие
 	if (this.innerText == '') { // gроверим, является ли поле, на которое мы нажимаем, "пустым"
 		// если gamer1 = true, то рисуем в innerElement симол крестика, если нет, то нолика
-		this.innerText = gamer1 ? 'X' : 'O'; 
+		this.innerText = gamer1 ? 'X' : 'O';
+		
+		var x = this.getAttribute('x');
+		var y = this.getAttribute('y');
+		
+		
 	}
 }
