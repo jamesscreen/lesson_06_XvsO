@@ -49,6 +49,17 @@ function tableClick(){
 		gameTable[x][y] = gamer1; // заполняем матрицу игры, первый ход за "Х"-ом
 		nullCount--; // понижаем счетчик количества ходов
 		
+		// задаем условия окончания игры
+		if ((gameTable[x][0] === gamer1 && gameTable[x][1] === gamer1 && gameTable[x][2] === gamer1)||
+			 	(gameTable[0][y] === gamer1 && gameTable[1][y] === gamer1 && gameTable[2][y] === gamer1)||
+				(gameTable[0][0] === gamer1 && gameTable[1][1] === gamer1 && gameTable[2][2] === gamer1)||
+				(gameTable[2][0] === gamer1 && gameTable[1][1] === gamer1 && gameTable[0][2] === gamer1))
+		{
+			 winner = gamer1; // определили победителя
+		}
+		
+		
+		
 		
 	}
 }
