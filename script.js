@@ -11,11 +11,16 @@ player.innerText = "Сейчас ходит X";
 
 // Генерация игрового поля
 for(var i=0; i<9; i++){
-	element = document.createElement('div'); // создаем новый блок DIV
+	element = document.createElement('div'); // создаем новый блок DIV соответствующий одной ячейке игрового поля
 	element.classList.add('cell'); // добавляем класс "cell" новому блоку DIV
 	
-	innerElement = document.createElement('div'); // создаем вложенный блок DIV
+	innerElement = document.createElement('div'); // создаем вложенный блок DIV соответствующий "Х" или "О"
 	innerElement.classList.add('inner-cell'); // добавляем класс "inner-cell" вложенному блоку DIV
+	
+	innerElement.onclick = tableClick; // создаем "событие" отвечающее за нажатие мышкой на элемент innerElement; нажатие запускает функцию tableClick
+	
+	//innerElement.setAttribute('x', (i % 3).toString());
+	//innerElement.setAttribute('y', parseInt(i / 3).toString());
 	
 	board.appendChild(element);
 	element.appendChild(innerElement);
