@@ -19,7 +19,6 @@ for(var i=0; i<9; i++){
 	
 	innerElement.onclick = tableClick; // создаем "событие" отвечающее за нажатие мышкой на элемент innerElement; нажатие запускает функцию tableClick
 	
-	
 	/*
 			[0,0][0,1][0,2]
 			[1,0][1,1][1,2]
@@ -28,14 +27,14 @@ for(var i=0; i<9; i++){
 			x - строка матрицы игры
 			y - столбец матрицы
 	*/
-	
 	innerElement.setAttribute('x', parseInt(i / 3).toString());
 	innerElement.setAttribute('y', (i % 3).toString());
-	
 	
 	board.appendChild(element);
 	element.appendChild(innerElement);
 }
+
+document.getElementsByClassName('button_reset')[0].onclick = reset;
 
 function tableClick(){
 	// все действия, изменения и расчеты выполняются только если поле "пустое", т.е. на него ранее не совершалось нажатие
@@ -84,13 +83,15 @@ function reset(){
 	console.log('reset start');
 	
 	gamer1 = true;
-	nullCount = 9;
 	gameTable = [[null, null, null],[null, null, null],[null, null, null]];
+	nullCount = 9;
 	winner = null;
+	
 	var table = document.getElementsByClassName('inner-cell');
-	for(var i = 0; i < table.length; i++){
-		table[i].innnerText = '';
+	for (var i = 0; i < table.length; i++){
+		table[i].innerText = '';
 	}
+	
 	player.innerText = 'Сейчас ходит X';
 	
 	console.log('reset stop');
