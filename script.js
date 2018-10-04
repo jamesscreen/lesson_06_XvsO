@@ -79,3 +79,14 @@ function tableClick(){
 	}
 }
 
+function reset(){
+	gamer1 = true;
+	nullCount = 9;
+	gameTable = [[null, null, null],[null, null, null],[null, null, null]];
+	winner = null;
+	player.innerText = 'Сейчас ходит X';
+	var table = document.getElementsByClassName('inner-cell');
+	for(var i = 0; i < table.length; i++ ){
+		table[i].innnerText = '';
+	}
+}
