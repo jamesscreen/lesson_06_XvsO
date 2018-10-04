@@ -18,4 +18,5 @@ for(var i=0; i<9; i++){
 	innerElement.classList.add('inner-cell'); // добавляем класс "inner-cell" вложенному блоку DIV
 	
 	board.appendChild(element);
+	element.appendChild(innerElement);
 }
